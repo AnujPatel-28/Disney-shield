@@ -2,6 +2,7 @@
 # DisneyShield.AI
 
 An AI-powered web application for detecting and acting on potential Disney IP piracy online.
+Open This Code in Vs Code Editor 
 
 ## Features
 
