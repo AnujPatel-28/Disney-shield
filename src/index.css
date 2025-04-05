@@ -1,0 +1,121 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 50% 99%;
+    --foreground: 225 25% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 225 25% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 225 25% 20%;
+
+    --primary: 220 70% 20%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 270 40% 37%;
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 42 83% 69%;
+    --accent-foreground: 225 25% 20%;
+
+    --muted: 220 15% 95%;
+    --muted-foreground: 220 15% 40%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 90%;
+    --input: 220 15% 90%;
+    --ring: 220 70% 20%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 225 25% 20%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 270 40% 37%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 42 83% 69%;
+    --sidebar-accent-foreground: 225 25% 20%;
+    --sidebar-border: 225 20% 30%;
+    --sidebar-ring: 42 83% 69%;
+  }
+
+  .dark {
+    --background: 225 30% 10%;
+    --foreground: 0 0% 98%;
+
+    --card: 225 25% 15%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 225 25% 15%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 220 60% 70%;
+    --primary-foreground: 225 25% 15%;
+
+    --secondary: 270 40% 50%;
+    --secondary-foreground: 0 0% 98%;
+
+    --accent: 42 83% 69%;
+    --accent-foreground: 225 25% 15%;
+
+    --muted: 225 25% 20%;
+    --muted-foreground: 220 15% 70%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 225 25% 25%;
+    --input: 225 25% 25%;
+    --ring: 42 83% 69%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-poppins;
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-playfair;
+  }
+}
+
+@layer utilities {
+  .font-poppins {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .bg-magic {
+    @apply bg-gradient-to-br from-disney-blue via-disney-purple to-disney-dark;
+  }
+
+  .border-magic {
+    @apply border-2 border-disney-gold/20 hover:border-disney-gold/50 transition-colors duration-300;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-disney-blue to-disney-purple bg-clip-text text-transparent;
+  }
+
+  .card-hover {
+    @apply hover:shadow-lg hover:shadow-disney-purple/10 hover:border-disney-gold/50 transition-all duration-300 ease-out transform hover:-translate-y-1;
+  }
+
+  .shimmer {
+    @apply bg-gradient-to-r from-transparent via-white/10 to-transparent bg-[length:200%_100%] animate-shimmer;
+  }
+}
